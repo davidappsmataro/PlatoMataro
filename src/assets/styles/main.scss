@@ -4,10 +4,18 @@
  */
 
 /**
- * Import variables
- */
-
+  * Import variables
+  */
 @import "variables";
+
+/**
+   * Import base styles
+   */
+@import "base";
+/**
+ * Import base typography
+ */
+@import "typography"; 
 
 /**
  * Import npm dependencies

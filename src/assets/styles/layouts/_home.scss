@@ -1,57 +1,112 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
+.header {
   display: flex;
-  flex-direction: column;
-  height: 100vh;
-  margin: 0;
-  padding: 2rem;
-  font-family: $font-family-sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: $uoc-bg;
-  color: $uoc-corporate;
-}
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: var(--terciary-color);
+  height: var(--alto-header);
+  &__navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1140px;
+    width: 100%;
+    &-title {
+      display: none;
+      font-size: 4.5rem;
+      font-weight: 700;
+      font-family: var(--secondary-font);
+      color: var(--secondary-color);
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    &-menu,
+    &-smedia {
+      display: none;
+      align-items: center;
+    }
 
-.uoc-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem;
-  border-radius: 2rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-}
+    &-menu-item,
+    &-smedia-item {
+      margin-right: 1.2rem;
+    }
 
-.uoc-logo {
-  display: block;
+    &-menu-link,
+    &-smedia-link {
+      font-size: 1.8rem;
+      font-weight: 700;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+    @media (min-width: $mqSm) {
+      &-title {
+        display: block;
+      }
+    }
+    @media (min-width: $mqMd) {
+      &-title,
+      &-bburguer-container {
+        display: none;
+      }
+      &-menu,
+      &-smedia {
+        display: flex;
+      }
+    }
+  }
+}
+.main {
+  max-width: 1140px;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 1.5rem;
-  max-width: 200px;
-  height: auto;
+  &__section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    &-titulo {
+      font-size: 2.8rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      &--principal {
+        font-size: 3.2rem;
+        font-weight: 900;
+        font-style: bold;
+        letter-spacing: 0.3rem;
+      }
+    }
+    &-text {
 
-  @media (min-width: $mqMinWidth) {
-    max-width: none;
+      line-height: 1.5;
+      font-weight: 300;
+      &--principal {
+        font-size: 2rem;
+        line-height: 1.5;
+        font-weight: 300;
+      }
+      &:not(:first-child) {
+        margin-top: 1rem; // Ajusta el margen superior para separar los elementos
+      }
+    }
+    &-cite {
+      margin-top: 1rem;
+
+      font-style: italic;
+      display: block;
+
+      &-link{
+        color: var(--secondary-color);
+        &:hover {
+          color: var(--secondary-light-color);
+        }
+
+      }
+    }
   }
 }
-
-.uoc-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $uoc-corporate;
-
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
-}
-
-.uoc-footer {
-  margin-top: 1.5rem;
-  font-size: 0.75rem;
-  text-align: center;
+cite {
+  margin-top: 2rem;;
 }

@@ -4,26 +4,101 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="author" content="David Pecharromán" />
+    <meta
+      name="description"
+      content="Bienvenido a la web que te explica cual es el plato de la ciudad de Mataró."
+    />
+    <title>El Plato de Mataró</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="assets/images/icono.png"
+    />
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
     <title>El Plat de Mataró</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#historia">Historia</a></li>
-          <li><a href="#receta">Receta</a></li>
-          <li><a href="#jornadas">Jornadas</a></li>
-          <li><a href="#mataro">Mataró</a></li>
+    <header class="header">
+      <nav class="header__navbar">
+        <a class="header__navbar-logo" href="#inicio">
+          <img
+            class="header__navbar-img"
+            src="./assets/images/logo-white.png"
+            srcset="
+              /src/assets/images/logo-white.png?width=160 1x,
+              /src/assets/images/logo-white.png?width=320 2x,
+              /src/assets/images/logo-white.png?width=500 3x
+            "
+            width="100"
+            height="100"
+            alt="Logo de El Plat de Mataró"
+          />
+        </a>
+        <div class="header__navbar-title">
+          <span class="header__navbar-title-text">El Plat de Mataró</span>
+        </div>
+        <ul class="header__navbar-menu">
+          <li class="header__navbar-menu-item">
+            <a class="header__navbar-menu-link" href="#inicio">Inicio</a>
+          </li>
+          <li class="header__navbar-menu-item">
+            <a class="header__navbar-menu-link" href="#historia">Historia</a>
+          </li>
+          <li class="header__navbar-menu-item">
+            <a class="header__navbar-menu-link" href="#receta">Receta</a>
+          </li>
+          <li class="header__navbar-menu-item">
+            <a class="header__navbar-menu-link" href="#jornadas">Jornadas</a>
+          </li>
+          <li class="header__navbar-menu-item">
+            <a class="header__navbar-menu-link" href="#mataro">Mataró</a>
+          </li>
         </ul>
+        <ul class="header__navbar-smedia">
+          <li class="header__navbar-smedia-item">
+            <a
+              class="header__navbar-smedia-link"
+              href="#"
+              title="Icono Facebook"
+              ><i class="fa-brands fa-facebook fa-xl"></i
+            ></a>
+          </li>
+          <li class="header__navbar-smedia-item">
+            <a
+              class="header__navbar-smedia-link"
+              href="#"
+              title="Icono Instagram"
+              ><i class="fa-brands fa-instagram fa-xl"></i
+            ></a>
+          </li>
+          <li class="header__navbar-smedia-item">
+            <a class="header__navbar-smedia-link" href="#" title="Icono X"
+              ><i class="fa-brands fa-x-twitter fa-xl"></i
+            ></a>
+          </li>
+          <li class="header__navbar-smedia-item">
+            <a class="header__navbar-smedia-link" href="#" title="Icono youtube"
+              ><i class="fa-brands fa-youtube fa-xl"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="header__navbar-bburguer-container">
+          <button class="header__navbar-bburguer-btn" aria-label="Botón Menú">
+            <i class="fa-solid fa-bars fa-3x on"></i>
+          </button>
+        </div>
       </nav>
     </header>
-    <main>
-      <section id="inicio">
-        <h1>El Plato de Mataró: guisantes con sepia y patatas</h1>
-        <p>
+    
+    <main class="main">
+      <section id="inicio" class="main__section">
+        <h1 class="main__section-titulo main__section-titulo--principal">
+          El Plato de Mataró: guisantes con sepia y patatas
+        </h1>
+        <p class="main__section-text main__section-text--principal">
           Mataró tiene un plato propio: el Plato de Mataró. Ya hace un cuarto de
           siglo que la sepia con guisantes y patatas disfruta de esta condición
           y de unas Jornadas Gastronómicas específicas entre los profesionales
@@ -33,9 +108,9 @@
           y si lo queremos hacer en casa.
         </p>
       </section>
-      <section id="historia">
-        <h2>Historia del Plato de Mataró</h2>
-        <p>
+      <section id="historia" class="main__section">
+        <h2 class="main__section-titulo">Historia del Plato de Mataró</h2>
+        <p class="main__section-text">
           Fue a finales del 1997 que la Concejalía de Promoción económica del
           Ayuntamiento de Mataró, pidió al Gremio de Hostelería y Turismo de
           Mataró y lo Maresme de definir un plato tradicional, típico de Mataró
@@ -47,7 +122,7 @@
           Jornadas del Guisante del Maresme junto con el Guisante de Llavaneres
           y la Pesolada de Caldes de Estrac.
         </p>
-        <p>
+        <p class="main__section-text">
           Se va manllevar el Guisante del Maresme , del requiebro o del
           garrofal, también de acuerdo con los labradores de la comarca para
           promocionar este producto de nuestra tierra. También las patatas de
@@ -56,18 +131,20 @@
           cocina catalana, y la sepia de nuestro mar Mediterráneo. Un combinado
           perfecto de productos de proximidad, de la tierra y del mar.
         </p>
-        <cite
-          >fuente:
+        <cite class="main__section-cite"
+          ><span class="main__section-cite-text">Fuente:</span>
           <a
             href="https://www.capgros.com/es/gastronomia/restaurantes/las-jornadas-del-plato-de-mataro-celebran-los-25-anos_806139_102.html"
+            class="main__section-cite-link"
+            target="_blank"
             >Capgros.com</a
           ></cite
         >
       </section>
-      <section id="receta">
-        <h2>La Receta del Plato de Mataró</h2>
-        <h3>Ingredientes</h3>
-        <ul>
+      <section id="receta" class="main__section">
+        <h2 class="main__section-titulo">La Receta del Plato de Mataró</h2>
+        <h3 class="main__section-subtitulo">Ingredientes</h3>
+        <ul class="main__section-lista">
           <li>Una sepia de 500g Medio kilo de guisantes desgranados</li>
           <li>3 cebollas tiernas</li>
           <li>2 ajos tiernos Igot de vino blanco de Alella</li>
@@ -78,16 +155,16 @@
           <li>1 pizca de sal</li>
         </ul>
 
-        <h3>Para la picadura</h3>
-        <ul>
+        <h3 class="main__section-subtitulo">Para la picadura</h3>
+        <ul class="main__section-lista">
           <li>50g. de almendras y avellanas</li>
           <li>1 trozo de nyora</li>
           <li>1 gra de ajo</li>
           <li>perejil</li>
         </ul>
 
-        <h3>Elaboración</h3>
-        <ul>
+        <h3 class="main__section-subtitulo">Elaboración</h3>
+        <ul class="main__section-lista">
           <li>
             En una cazuela se posa óleo de oliva y la sepia cortada a trozos en
             frío.
@@ -109,10 +186,12 @@
           </li>
           <li>Es un plato que se puede acompañar con <i>all-i-oli</i></li>
         </ul>
-        <cite
-          >fuente:
+        <cite class="main__section-cite"
+          ><span class="main__section-cite-text">Fuente:</span>
           <a
             href="https://www.capgros.com/es/gastronomia/recetas/asi-se-hace-el-plato-de-mataro-guisantes-con-sepia-y-patatas_806138_102.html"
+            class="main__section-cite-link"
+            target="_blank"
             >Capgros.com</a
           ></cite
         >
@@ -126,11 +205,10 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-        
       </section>
-      <section id="jornadas">
-        <h2>Joranadas Gasgtronómicas</h2>
-        <p>
+      <section id="jornadas" class="main__section">
+        <h2 class="main__section-titulo">Joranadas Gastronómicas</h2>
+        <p class="main__section-text">
           enim sint. Ad pariatur nisi est consequat laboris. Labore amet
           reprehenderit ut reprehenderit ad excepteur incididunt enim magna
           reprehenderit qui. Excepteur cillum ex excepteur adipisicing minim.
@@ -170,26 +248,26 @@
           qui
         </p>
       </section>
-      <section id="mataro">
-        <h2>Mataró</h2>
-        <p>
+      <section id="mataro" class="main__section">
+        <h2 class="main__section-titulo">Mataró</h2>
+        <p class="main__section-text">
           ¡Mataró es una ciudad mediterránea para descubrir en cualquier momento
           del año! La capital del Maresme tiene más de 129.000 habitantes y goza
           de una ubicación privilegiada: está situada entre el mar y la
           Serralada Litoral, tan sólo a 30 minutos al norte de Barcelona y muy
           cerca de las poblaciones más turísticas de la zona.
         </p>
-        <p>
+        <p class="main__section-text">
           La ciudad ha sabido conservar tradición, historia, patrimonio, cultura
           y entorno natural para ofrecer a sus visitantes.
         </p>
-        <p>
+        <p class="main__section-text">
           Un paseo por el centro de la ciudad permite conocer una oferta
           comercial y gastronómica de calidad y diversa, entre la que también se
           encuentran los tradicionales mercados d’El Rengle y de la Plaça de
           Cuba, con los mejores productos “Collits a Casa”.
         </p>
-        <p>
+        <p class="main__section-text">
           Esta oferta se combina con un entorno atractivo y agradable donde
           puedes sorprenderte con bocados del rico patrimonio de la ciudad: el
           legado romano de la antigua ciudad de Iluro, la belleza del conjunto
@@ -198,25 +276,25 @@
           actualmente sede del Museo de Arte Contemporáneo donde se exhibe la
           Colección Bassat, son sólo algunos ejemplos.
         </p>
-        <p>
+        <p class="main__section-text">
           Éste patrimonio de primer nivel se puede descubrir con las visitas
           guiadas o con el servicio gratuito de audioguías, disponible en cinco
           idiomas (catalán, español, inglés, francés y ruso).
         </p>
-        <p>
+        <p class="main__section-text">
           Si te acercas a la costa, encontrarás unas playas con todos los
           servicios para pasar un buen rato de baño. La oferta gastronómica y de
           ocio del frente marítimo se complementa con la del Port de Mataró, un
           puerto deportivo con más de un millar de amarres que ofrece
           actividades náuticas y subacuáticas durante todo el año.
         </p>
-        <p>
+        <p class="main__section-text">
           Si te apasiona la montaña, puedes pasear y hacer excursiones a pie o
           en bicicleta por el Parc del Montnegre i Corredor y, si eres amante de
           la aventura, puedes disfrutar del Bosc Vertical, en el Parque
           Forestal.
         </p>
-        <p>
+        <p class="main__section-text">
           Mataró es una ciudad para descubrir durante todo el año, pero en
           verano la actividad se intensifica. A finales de julio la ciudad
           estalla con las fiestas patronales de Les Santes, declarada Fiesta
