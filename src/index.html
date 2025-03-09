@@ -21,78 +21,8 @@
     <title>El Plat de Mataró</title>
   </head>
   <body>
-    <header class="header">
-      <nav class="header__navbar">
-        <a class="header__navbar-logo" href="#inicio">
-          <img
-            class="header__navbar-img"
-            src="./assets/images/logo-white.png"
-            srcset="
-              /src/assets/images/logo-white.png?width=160 1x,
-              /src/assets/images/logo-white.png?width=320 2x,
-              /src/assets/images/logo-white.png?width=500 3x
-            "
-            width="100"
-            height="100"
-            alt="Logo de El Plat de Mataró"
-          />
-        </a>
-        <div class="header__navbar-title">
-          <span class="header__navbar-title-text">El Plat de Mataró</span>
-        </div>
-        <ul class="header__navbar-menu">
-          <li class="header__navbar-menu-item">
-            <a class="header__navbar-menu-link" href="#inicio">Inicio</a>
-          </li>
-          <li class="header__navbar-menu-item">
-            <a class="header__navbar-menu-link" href="#historia">Historia</a>
-          </li>
-          <li class="header__navbar-menu-item">
-            <a class="header__navbar-menu-link" href="#receta">Receta</a>
-          </li>
-          <li class="header__navbar-menu-item">
-            <a class="header__navbar-menu-link" href="#jornadas">Jornadas</a>
-          </li>
-          <li class="header__navbar-menu-item">
-            <a class="header__navbar-menu-link" href="#mataro">Mataró</a>
-          </li>
-        </ul>
-        <ul class="header__navbar-smedia">
-          <li class="header__navbar-smedia-item">
-            <a
-              class="header__navbar-smedia-link"
-              href="#"
-              title="Icono Facebook"
-              ><i class="fa-brands fa-facebook fa-xl"></i
-            ></a>
-          </li>
-          <li class="header__navbar-smedia-item">
-            <a
-              class="header__navbar-smedia-link"
-              href="#"
-              title="Icono Instagram"
-              ><i class="fa-brands fa-instagram fa-xl"></i
-            ></a>
-          </li>
-          <li class="header__navbar-smedia-item">
-            <a class="header__navbar-smedia-link" href="#" title="Icono X"
-              ><i class="fa-brands fa-x-twitter fa-xl"></i
-            ></a>
-          </li>
-          <li class="header__navbar-smedia-item">
-            <a class="header__navbar-smedia-link" href="#" title="Icono youtube"
-              ><i class="fa-brands fa-youtube fa-xl"></i
-            ></a>
-          </li>
-        </ul>
-        <div class="header__navbar-bburguer-container">
-          <button class="header__navbar-bburguer-btn" aria-label="Botón Menú">
-            <i class="fa-solid fa-bars fa-3x on"></i>
-          </button>
-        </div>
-      </nav>
-    </header>
-    
+
+    <include src="./views/header.html"></include>
     <main class="main">
       <section id="inicio" class="main__section">
         <h1 class="main__section-titulo main__section-titulo--principal">
@@ -305,7 +235,7 @@
         </p>
       </section>
     </main>
-
+    <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>
     <!-- do not remove this line! -->
   </body>
