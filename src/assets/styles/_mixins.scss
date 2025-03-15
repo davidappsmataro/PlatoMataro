@@ -1,26 +1,31 @@
-
 @use "sass:color";
 
-@mixin button($bg-color, $text-color, $border-color: $bg-color, $padding: 0.5rem 1rem, $font-size: 1rem) {
-  background-color: $bg-color;
-  color: $text-color;
-  border: 2px solid $border-color;
+@mixin button(
+  $bg-color,
+  $text-color,
+  $border-color: $bg-color,
+  $padding: 0.5rem 1rem,
+  $font-size: 1rem
+) {
+  // Box model
+  min-width: $font-size * 2;
   padding: $padding;
+
+  // Typography
   font-size: $font-size;
-  min-width: $font-size *2;
+  color: $text-color;
   text-align: center;
-  border-radius: 0.25rem;
+
+  // Visual
   cursor: pointer;
+  background-color: $bg-color;
+  border: 2px solid $border-color;
+  border-radius: 0.25rem;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 
   &:hover {
-
-
-
+    color: color.scale($text-color, $lightness: 20%);
     background-color: color.scale($bg-color, $lightness: 20%);
     border-color: color.scale($bg-color, $lightness: 20%);
-    color:  color.scale($text-color, $lightness: 20%);
-
   }
-
 }

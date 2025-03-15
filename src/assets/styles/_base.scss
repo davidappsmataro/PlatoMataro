@@ -25,27 +25,23 @@
 *,
 *:before,
 *:after {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
 }
 html {
   font-family: var(--main-font);
   font-size: 10px;
   scroll-behavior: smooth;
-
 }
 
-
 body {
-
   font-size: 1.6rem;
-
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -57,18 +53,8 @@ iframe {
   height: auto;
   aspect-ratio: 16/9;
   border: 0;
-
 }
 img {
   max-width: 100%;
   height: auto;
 }
-
-/* :target::before {
-  content: "";
-  display: block;
-  height: var(--alto-header); // Ajusta esto a la altura de tu header
-  margin-top: calc(-1 * var(--alto-header)); // Ajusta esto a la altura de tu header
-  visibility: hidden; // Oculta el pseudo-elemento para que no deje espacio visible
-}
- */
