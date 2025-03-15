@@ -2,8 +2,10 @@
 
 $marca-primary: #6684be;
 $marca-secondary: #db727e;
-$marca-tertiary: white;
+$marca-terciary: white;
+$marca-primary-light: color.scale($marca-primary, $lightness: 20%);
 $marca-secondary-light: color.scale($marca-secondary, $lightness: 40%);
+$fondo-transparente: color.change($marca-terciary, $alpha: 0.5);
 
 $mqSm: 576px;
 $mqMd: 768px;

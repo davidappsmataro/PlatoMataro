@@ -7,10 +7,11 @@
   --primary-color: #{$marca-primary};
   --secondary-color: #{$marca-secondary};
   --secondary-light-color: #{$marca-secondary-light};
-  --terciary-color: #{$marca-tertiary};
+  --terciary-color: #{$marca-terciary};
 
   --bg-color: rgb(232, 232, 232);
   --bg-secondary-color: rgba(20, 20, 20, 1);
+  --bg-fondo-transparente: #{$fondo-transparente};
 
   --main-font: "Roboto", sans-serif;
   --secondary-font: "Inspiration", serif;
@@ -31,14 +32,15 @@
 html {
   font-family: var(--main-font);
   font-size: 10px;
-  /* height: 100vh; */
+  scroll-behavior: smooth;
+
 }
 
 
 body {
-  /* background-color: var(--bg-color);
-  color: var(--bg-extremos); */
+
   font-size: 1.6rem;
+
 }
 
 a {
@@ -50,8 +52,23 @@ a {
 ul {
   list-style: none;
 }
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+  border: 0;
 
+}
 img {
   max-width: 100%;
   height: auto;
 }
+
+/* :target::before {
+  content: "";
+  display: block;
+  height: var(--alto-header); // Ajusta esto a la altura de tu header
+  margin-top: calc(-1 * var(--alto-header)); // Ajusta esto a la altura de tu header
+  visibility: hidden; // Oculta el pseudo-elemento para que no deje espacio visible
+}
+ */

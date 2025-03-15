@@ -3,7 +3,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="David Pecharromán" />
     <meta
       name="description"
@@ -19,21 +19,24 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
     <title>El Plat de Mataró</title>
+    <script type="module" src="assets/scripts/splide.js"></script>
   </head>
   <body>
-
     <include src="./views/header.html"></include>
     <main class="main">
+      <include src="./views/splide.html"></include>
       <section id="inicio" class="main__section">
         <h1 class="main__section-titulo main__section-titulo--principal">
           El Plato de Mataró: guisantes con sepia y patatas
         </h1>
         <p class="main__section-text main__section-text--principal">
-          Mataró tiene un plato propio: el Plato de Mataró. Ya hace un cuarto de
-          siglo que la sepia con guisantes y patatas disfruta de esta condición
-          y de unas Jornadas Gastronómicas específicas entre los profesionales
-          de la restauración. Las de este año son las 25enes Jornadas que
-          impulsa el Gremio de Hostelería y Turismo del Maresme. Durante 6
+          Mataró tiene un plato propio: <strong>El Plato de Mataró</strong>. Ya
+          hace más de un cuarto de siglo que
+          <strong>la sepia con guisantes y patatas</strong> disfruta de esta
+          condición y de unas Jornadas Gastronómicas específicas entre los
+          profesionales de la restauración. Las de este año son las
+          <strong>27enes Jornadas</strong> que impulsa el
+          <strong>Gremio de Hostelería y Turismo del Maresme</strong> Durante 6
           semanas hasta 12 restaurantes de la ciudad ofrecen su versión pero...
           y si lo queremos hacer en casa.
         </p>
@@ -47,20 +50,23 @@
           que posicionara en la ciudad y que fuera abanderado de la cocina
           mataronina. La Junta directiva de la entidad aprobó este plato de
           proximidad, producto de la tierra y de temporada de primavera como
-          representativo de la ciudad. El 1998 se inició pues esta aventura
-          gastronómica, que con los años quedaría enmarcada dentro de las
-          Jornadas del Guisante del Maresme junto con el Guisante de Llavaneres
-          y la Pesolada de Caldes de Estrac.
+          representativo de la ciudad.
+          <strong>El 1998 se inició pues esta aventura gastronómica</strong>,
+          que con los años quedaría enmarcada dentro de las Jornadas del
+          Guisante del Maresme junto con el Guisante de Llavaneres y la Pesolada
+          de Caldes de Estrac.
         </p>
         <p class="main__section-text">
           Se va manllevar el Guisante del Maresme , del requiebro o del
           garrofal, también de acuerdo con los labradores de la comarca para
           promocionar este producto de nuestra tierra. También las patatas de
-          Mataró, las antiguamente "Mataró potatoes" cómo eran conocidas
-          internacionalmente y que se añadían a este plato tradicional de la
-          cocina catalana, y la sepia de nuestro mar Mediterráneo. Un combinado
-          perfecto de productos de proximidad, de la tierra y del mar.
+          Mataró, las antiguamente <span lang="en">"Mataró potatoes"</span> cómo
+          eran conocidas internacionalmente y que se añadían a este plato
+          tradicional de la cocina catalana, y la sepia de nuestro mar
+          Mediterráneo. Un combinado perfecto de productos de proximidad, de la
+          tierra y del mar.
         </p>
+
         <cite class="main__section-cite"
           ><span class="main__section-cite-text">Fuente:</span>
           <a
@@ -73,49 +79,70 @@
       </section>
       <section id="receta" class="main__section">
         <h2 class="main__section-titulo">La Receta del Plato de Mataró</h2>
-        <h3 class="main__section-subtitulo">Ingredientes</h3>
-        <ul class="main__section-lista">
-          <li>Una sepia de 500g Medio kilo de guisantes desgranados</li>
-          <li>3 cebollas tiernas</li>
-          <li>2 ajos tiernos Igot de vino blanco de Alella</li>
-          <li>
-            1 vaso pequeño de óleo de oliva Medio litro de agua con azúcar
-          </li>
-          <li>300g. de patatas</li>
-          <li>1 pizca de sal</li>
-        </ul>
-
-        <h3 class="main__section-subtitulo">Para la picadura</h3>
-        <ul class="main__section-lista">
-          <li>50g. de almendras y avellanas</li>
-          <li>1 trozo de nyora</li>
-          <li>1 gra de ajo</li>
-          <li>perejil</li>
-        </ul>
+        <div class="main__section-receta-container">
+          <div>
+            <h3 class="main__section-subtitulo">Ingredientes</h3>
+            <ul class="main__section-ingredientes">
+              <li class="main__section-ingredientes-item">
+                Una sepia de 500g Medio kilo de guisantes desgranados
+              </li>
+              <li class="main__section-ingredientes-item">
+                3 cebollas tiernas
+              </li>
+              <li class="main__section-ingredientes-item">
+                2 ajos tiernos Igot de vino blanco de Alella
+              </li>
+              <li class="main__section-ingredientes-item">
+                1 vaso pequeño de óleo de oliva Medio litro de agua con azúcar
+              </li>
+              <li class="main__section-ingredientes-item">300g. de patatas</li>
+              <li class="main__section-ingredientes-item">1 pizca de sal</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="main__section-subtitulo">Para la picadura</h3>
+            <ul class="main__section-ingredientes">
+              <li class="main__section-ingredientes-item">
+                50g. de almendras y avellanas
+              </li>
+              <li class="main__section-ingredientes-item">1 trozo de nyora</li>
+              <li class="main__section-ingredientes-item">1 gra de ajo</li>
+              <li class="main__section-ingredientes-item">perejil</li>
+            </ul>
+          </div>
+        </div>
 
         <h3 class="main__section-subtitulo">Elaboración</h3>
-        <ul class="main__section-lista">
-          <li>
+        <ol class="main__section-preparacion">
+          <li class="main__section-preparacion-item">
             En una cazuela se posa óleo de oliva y la sepia cortada a trozos en
             frío.
           </li>
-          <li>
+          <li class="main__section-preparacion-item">
             Cuando se haya consumido el agua de la sepia añadimos las cebollas y
             los ajo tiernos, a continuación el tomate tachado.
           </li>
-          <li>
+          <li class="main__section-preparacion-item">
             Un golpe cocido lo regamos con vino blanco. Lo dejamos reducir.
           </li>
-          <li>Abocamos los guisantes y las patatas, lo salamos.</li>
-          <li>Lo cubrimos con agua y azúcar.</li>
-          <li>Cuando la sepia esté blanda añadimos la picadura.</li>
-          <li>
+          <li class="main__section-preparacion-item">
+            Abocamos los guisantes y las patatas, lo salamos.
+          </li>
+          <li class="main__section-preparacion-item">
+            Lo cubrimos con agua y azúcar.
+          </li>
+          <li class="main__section-preparacion-item">
+            Cuando la sepia esté blanda añadimos la picadura.
+          </li>
+          <li class="main__section-preparacion-item">
             Para hacer la picadura En un mortero picamos las almendras y
             avellanas, la nyora, el ajo y el perejil y lo deshacemos con un poco
             de agua.
           </li>
-          <li>Es un plato que se puede acompañar con <i>all-i-oli</i></li>
-        </ul>
+          <li class="main__section-preparacion-item">
+            Es un plato que se puede acompañar con <i>all-i-oli</i>
+          </li>
+        </ol>
         <cite class="main__section-cite"
           ><span class="main__section-cite-text">Fuente:</span>
           <a
@@ -125,67 +152,70 @@
             >Capgros.com</a
           ></cite
         >
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/RKaq5zASZqM?si=KSzei6eu72RXYluP"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+        <figure class="main__section-preparacion-video">
+          <iframe
+            class="main__section-preparacion-video-youtube"
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/RKaq5zASZqM?si=KSzei6eu72RXYluP"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <figcaption class="main__section-preparacion-video-caption">
+            Vídeo de la receta del Plato de Mataró -
+            <cite>Restaurant El Nou-Cents, Mataró </cite>
+          </figcaption>
+        </figure>
       </section>
       <section id="jornadas" class="main__section">
         <h2 class="main__section-titulo">Joranadas Gastronómicas</h2>
         <p class="main__section-text">
-          enim sint. Ad pariatur nisi est consequat laboris. Labore amet
-          reprehenderit ut reprehenderit ad excepteur incididunt enim magna
-          reprehenderit qui. Excepteur cillum ex excepteur adipisicing minim.
-          Enim esse ut dolor cillum cupidatat voluptate adipisicing incididunt
-          eiusmod. Ipsum ad est magna sint minim minim laboris fugiat non
-          dolore. Irure et eu cupidatat id tempor est proident. Tempor ipsum
-          voluptate aliqua duis nostrud Lorem. Lorem sit elit ad velit. Mollit
-          fugiat nulla irure consectetur fugiat dolore ex consequat id ad labore
-          minim esse. Dolore dolor anim laboris dolor sint. Officia eiusmod ea
-          ullamco ipsum in non qui anim excepteur aliqua reprehenderit dolore
-          quis adipisicing. Ad sint sint do proident deserunt eu cillum fugiat
-          pariatur voluptate ullamco laboris. Sunt nostrud enim quis nulla
-          voluptate esse quis ipsum consectetur duis sit exercitation qui dolor.
-          Qui aute enim nisi adipisicing sint elit. Dolor irure fugiat nisi amet
-          do voluptate veniam excepteur. Sint enim eu incididunt do ex cupidatat
-          eu fugiat velit eiusmod ipsum mollit. Dolore ea tempor ea nisi
-          adipisicing aliqua mollit qui pariatur. Sunt exercitation labore
-          dolore nisi officia do dolore irure magna elit esse sit. Occaecat
-          consequat deserunt ullamco aute officia enim id laborum ut ut eu.
-          Pariatur laborum ex adipisicing mollit officia amet officia fugiat
-          nulla. Duis dolor Lorem magna et incididunt. Sit occaecat anim
-          pariatur et cillum nostrud proident cupidatat pariatur consequat
-          consequat laboris excepteur. Irure enim magna non sint incididunt
-          aliqua. Ullamco sint fugiat sit reprehenderit non minim consectetur
-          nulla qui anim irure duis cillum ad. Labore elit aliquip est est non
-          nostrud laborum excepteur pariatur occaecat est irure. Cupidatat
-          officia aliqua eu qui amet exercitation fugiat non laborum laboris.
-          Consequat labore occaecat excepteur est cillum enim culpa. Qui Lorem
-          ullamco exercitation do. Et nisi nostrud anim nulla cillum enim
-          proident. Cupidatat fugiat voluptate aliquip id amet labore commodo
-          officia enim aliquip nisi ullamco laboris nisi. Ex eiusmod ex sint
-          incididunt cillum sunt velit voluptate nulla quis ullamco. Labore qui
-          aute anim qui commodo velit et enim quis qui deserunt incididunt
-          fugiat deserunt. Excepteur esse mollit elit aute quis laborum commodo
-          consequat in non occaecat sint ut cillum. Voluptate commodo do culpa
-          sit. Anim ipsum veniam commodo deserunt excepteur id velit mollit anim
-          qui
+          El Gremi d’Hostaleria i Turisme de Mataró i el Maresme organiza un año
+          más las
+          <strong>JORNADAS GASTRONÓMICAS DEL PLATO DE MATARÓ</strong> entre los
+          días <strong>15 de Marzo y 1 de Mayo</strong>.
         </p>
+        <img
+          class="main__section-cartel"
+          src="assets/images/bannerjornadas.jpg"
+          loading="lazy"
+          alt="Cartel de las jornadas"
+        />
+
+        <p class="main__section-text">
+          Durante estos días los ciudadanos de Mataró y el Maresme podrán
+          disfrutar del plato típico: la “Sepia con guisantes y patatas” o los
+          “guisantes con sepia y patatas” en diferentes establecimientos de la
+          ciudad.
+        </p>
+        <p class="main__section-text">
+          El objetivo del Gremi fue definir un plato tradicional, típico de
+          Mataró que posicionara en la ciudad y que fuera abanderado de la
+          cocina mataronina. Actualmente, el objetivo es mantener y promocionar
+          esta tradición.
+        </p>
+        <cite class="main__section-cite"
+          ><span class="main__section-cite-text">Fuente:</span>
+          <a
+            href="https://gremihostaleria.com/es/2024/04/09/xxvi-jornadas-gastronomicas-del-plato-de-mataro-2024/"
+            class="main__section-cite-link"
+            target="_blank"
+            >Gremi d’Hostaleria i Turisme de Mataró i el Maresme</a
+          ></cite
+        >
       </section>
       <section id="mataro" class="main__section">
         <h2 class="main__section-titulo">Mataró</h2>
         <p class="main__section-text">
-          ¡Mataró es una ciudad mediterránea para descubrir en cualquier momento
-          del año! La capital del Maresme tiene más de 129.000 habitantes y goza
-          de una ubicación privilegiada: está situada entre el mar y la
-          Serralada Litoral, tan sólo a 30 minutos al norte de Barcelona y muy
-          cerca de las poblaciones más turísticas de la zona.
+          ¡<strong>Mataró</strong> es una ciudad mediterránea para descubrir en
+          cualquier momento del año! La capital del Maresme tiene más de
+          <strong>129.000 habitantes</strong> y goza de una ubicación
+          privilegiada: está situada entre el mar y la Serralada Litoral, tan
+          sólo a <strong>30 minutos al norte de Barcelona</strong> y muy cerca
+          de las poblaciones más turísticas de la zona.
         </p>
         <p class="main__section-text">
           La ciudad ha sabido conservar tradición, historia, patrimonio, cultura
@@ -197,6 +227,61 @@
           encuentran los tradicionales mercados d’El Rengle y de la Plaça de
           Cuba, con los mejores productos “Collits a Casa”.
         </p>
+        <figure class="main__section-figure main__section-figure--float-right">
+          <picture>
+            <source
+              srcset="
+                assets/images/Nau_Gaudi.jpg?as=webp&width=992 992w,
+                assets/images/Nau_Gaudi.jpg?as=webp&width=715 715w,
+                assets/images/Nau_Gaudi.jpg?as=webp&width=570 570w,
+                assets/images/Nau_Gaudi.jpg?as=webp&width=420 420w
+              "
+              type="image/webp"
+              sizes="(min-width: 1200px) 400px, (min-width: 993px) calc(1140px * 0.35), (min-width: 769px) calc(1140px * 0.3), 100vw"
+            />
+            <source
+              srcset="
+                assets/images/Nau_Gaudi.jpg?width=992 992w,
+                assets/images/Nau_Gaudi.jpg?width=715 715w,
+                assets/images/Nau_Gaudi.jpg?width=570 570w,
+                assets/images/Nau_Gaudi.jpg?width=420 420w
+              "
+              type="image/jpeg"
+              sizes="(min-width: 1200px) 400px, (min-width: 993px) calc(1140px * 0.35), (min-width: 769px) calc(1140px * 0.3), 100vw"
+            />
+
+            <img
+              class="main__section-figure-img"
+              src="assets/images/Nau_Gaudi.jpg"
+              loading="lazy"
+              alt="Imagen Nau Gaudí de Mataró"
+            />
+          </picture>
+          <figcaption class="main__section-figure-caption">
+            De
+            <a
+              class="main__section-figure-caption-link"
+              target="_blank"
+              href="//commons.wikimedia.org/wiki/User:Canaan"
+              title="User:Canaan"
+              >Canaan</a
+            >
+            - <span class="int-own-work" lang="es">Trabajo propio</span>,
+            <a
+              class="main__section-figure-caption-link"
+              target="_blank"
+              href="https://creativecommons.org/licenses/by-sa/4.0"
+              title="Creative Commons Attribution-Share Alike 4.0"
+              >CC BY-SA 4.0</a
+            >,
+            <a
+              class="main__section-figure-caption-link"
+              target="_blank"
+              href="https://commons.wikimedia.org/w/index.php?curid=138372835"
+              >Enlace</a
+            >
+          </figcaption>
+        </figure>
         <p class="main__section-text">
           Esta oferta se combina con un entorno atractivo y agradable donde
           puedes sorprenderte con bocados del rico patrimonio de la ciudad: el
@@ -224,6 +309,47 @@
           la aventura, puedes disfrutar del Bosc Vertical, en el Parque
           Forestal.
         </p>
+
+        <figure class="main__section-figure main__section-figure--float-left">
+          <picture>
+            <source
+              srcset="
+                assets/images/santes1.jpeg?as=webp&width=992 992w,
+                assets/images/santes1.jpeg?as=webp&width=715 715w,
+                assets/images/santes1.jpeg?as=webp&width=570 570w,
+                assets/images/santes1.jpeg?as=webp&width=420 420w
+              "
+              type="image/webp"
+              sizes="(min-width: 1200px) 570px, (min-width: 993px) calc(1140px * 0.5), (min-width: 769px) calc(1140px * 0.38), 100vw"
+            />
+            <source
+              srcset="
+                assets/images/santes1.jpeg?width=992 992w,
+                assets/images/santes1.jpeg?width=715 715w,
+                assets/images/santes1.jpeg?width=570 570w,
+                assets/images/santes1.jpeg?width=420 420w
+              "
+              type="image/jpeg"
+              sizes="(min-width: 1200px) 570px, (min-width: 993px) calc(1140px * 0.5), (min-width: 769px) calc(1140px * 0.38), 100vw"
+            />
+
+            <img
+              class="main__section-figure-img"
+              src="assets/images/santes1.jpeg"
+              loading="lazy"
+              alt="Imagen de Mataró"
+            />
+          </picture>
+          <figcaption class="main__section-figure-caption">
+            <a
+              class="main__section-figure-caption-link"
+              target="_blank"
+              href="https://www.lessantes.cat/galeria-de-fotos-i-videos/fotos-2024"
+            >
+              Santes Mataró</a
+            >
+          </figcaption>
+        </figure>
         <p class="main__section-text">
           Mataró es una ciudad para descubrir durante todo el año, pero en
           verano la actividad se intensifica. A finales de julio la ciudad
@@ -233,6 +359,12 @@
           -práctica única en el mundo-, son algunas de las principales
           actividades que tienen lugar en la ciudad durante las fiestas.
         </p>
+        <p class="main__section-text">
+          <strong>Les Santes</strong> se celebran alrededor del 27 de julio,
+          desde la primera mitad del siglo XIX, en honor a las patronas de la
+          ciudad: Santa Juliana i Santa Semproniana.
+        </p>
+        <div class="clearfix"></div>
       </section>
     </main>
     <include src="./views/footer.html"></include>

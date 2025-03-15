@@ -6,6 +6,15 @@
   background-color: var(--primary-color);
   color: var(--terciary-color);
   height: var(--alto-header);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+
+  &--sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
   &__navbar {
     display: flex;
     align-items: center;
@@ -20,27 +29,98 @@
       color: var(--secondary-color);
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
-    &-menu,
+    &-menu {
+      position: absolute;
+      top: var(--alto-header);
+      left: 0;
+      right: 0;
+      background-color: $marca-primary-light;
+      display: flex;
+      width: 50%;
+      min-width: 150px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      display: none;
+
+      &-item {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid $fondo-transparente;
+        &:is(:last-child) {
+          border-bottom: none;
+        }
+        width: 90%;
+        text-align: center;
+        text-transform: uppercase;
+        @media (min-width: $mqMd) {
+          border: none;
+          padding-top: 0rem;
+          padding-bottom: 0rem;
+          margin-top: 0rem;
+          margin-right: 1.8rem;
+
+          &:is(:last-child) {
+            margin-bottom: 0rem;
+          }
+        }
+      }
+      &-link {
+        font-size: 1.9rem;
+        font-weight: 700;
+        transition: color 0.3s;
+        &:hover {
+          color: var(--secondary-color);
+        }
+        @media (min-width: $mqMd) {
+          font-size: 1.6rem;
+        }
+      }
+      &--active {
+        display: flex;
+      }
+
+      @media (min-width: $mqMd) {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        background-color: $marca-primary;
+        padding: auto;
+        width: auto;
+        box-shadow: none;
+      }
+    }
+
     &-smedia {
       display: none;
       align-items: center;
-    }
-
-    &-menu-item,
-    &-smedia-item {
-      margin-right: 1.2rem;
-    }
-
-    &-menu-link,
-    &-smedia-link {
-      font-size: 1.8rem;
-      font-weight: 700;
-      transition: color 0.3s;
-
-      &:hover {
-        color: var(--secondary-color);
+      @media (min-width: $mqMd) {
+        display: flex;
+        &-item {
+          margin-right: 1.8rem;
+        }
+        &-link {
+          font-size: 1.8rem;
+          font-weight: 700;
+          transition: color 0.3s;
+          &:hover {
+            color: var(--secondary-color);
+          }
+        }
       }
     }
+
+    &-bburguer {
+      &-btn {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        color: $marca-terciary;
+      }
+    }
+
     @media (min-width: $mqSm) {
       &-title {
         display: block;
@@ -51,44 +131,47 @@
       &-bburguer-container {
         display: none;
       }
-      &-menu,
-      &-smedia {
-        display: flex;
-      }
     }
   }
 }
 .main {
-  max-width: 1140px;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
   &__section {
     margin-top: 2rem;
     margin-bottom: 2rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    max-width: 1140px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    /* https://css-tricks.com/fixed-headers-and-jump-links-the-solution-is-scroll-margin-top/ */
+    /* https://gomakethings.com/how-to-prevent-anchor-links-from-scrolling-behind-a-sticky-header-with-one-line-of-css/*/
+    scroll-margin-top: calc(var(--alto-header) + 2rem);
+    &:is(:last-child) {
+      margin-bottom: 15rem;
+    }
+
     &-titulo {
-      font-size: 2.8rem;
+      font-size: 2.9rem;
       color: var(--primary-color);
+      margin-top: 4rem;
       margin-bottom: 1rem;
       &--principal {
-        font-size: 3.2rem;
+        font-size: 3.5rem;
         font-weight: 900;
         font-style: bold;
         letter-spacing: 0.3rem;
       }
     }
     &-text {
-
       line-height: 1.5;
       font-weight: 300;
       &--principal {
-        font-size: 2rem;
+        font-size: 2.3rem;
         line-height: 1.5;
         font-weight: 300;
       }
       &:not(:first-child) {
-        margin-top: 1rem; // Ajusta el margen superior para separar los elementos
+        margin-top: 1rem;
       }
     }
     &-cite {
@@ -97,16 +180,246 @@
       font-style: italic;
       display: block;
 
-      &-link{
+      &-link {
         color: var(--secondary-color);
         &:hover {
           color: var(--secondary-light-color);
         }
+      }
+    }
+    &-receta-container {
+      display: flex;
+      flex-direction: column;
 
+      @media (min-width: $mqMd) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    &-subtitulo {
+      font-size: 2.5rem;
+      color: $marca-primary;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      font-weight: 300;
+      &:not(:first-child) {
+        margin-top: 4rem;
+      }
+    }
+    &-ingredientes,
+    &-preparacion {
+      list-style-type: disc;
+      margin-left: 2rem;
+      list-style-position: inside;
+      &-item {
+        margin-top: 1rem;
+        font-weight: 300;
+      }
+    }
+    &-preparacion {
+      list-style-type: decimal;
+      &-video {
+        margin-top: 5rem;
+
+        margin-left: auto;
+        margin-right: auto;
+        &-youtube {
+          border: 5px solid $marca-primary;
+        }
+
+        @media (min-width: $mqLg) {
+          width: 70%;
+        }
+        &-caption {
+          margin: 1rem 0;
+          font-size: 1.8rem;
+          font-weight: 300;
+          text-align: center;
+        }
+      }
+    }
+    &-cartel {
+      margin: 2rem 0;
+    }
+    &-figure {
+      /*  width: 50%; */
+      margin-top: 2rem;
+      &-img {
+        border: 3px solid $marca-primary;
+      }
+      &-caption {
+        margin-top: 0.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 0.5rem;
+
+        &-link {
+          color: $marca-secondary;
+          font-style: italic;
+
+          &:hover {
+            color: $marca-secondary-light;
+          }
+        }
+        @media (max-width: $mqMd) {
+          text-align: right;
+          margin-bottom: 1rem;
+        }
+      }
+      &--float-left {
+        float: left;
+        @media (min-width: $mqMd) {
+          margin-right: 2rem;
+        }
+      }
+      &--float-right {
+        float: right;
+        @media (min-width: $mqMd) {
+          margin-left: 2rem;
+        }
       }
     }
   }
 }
 cite {
-  margin-top: 2rem;;
+  margin-top: 2rem;
+}
+
+.splide {
+  .splide__slide {
+    height: 100%;
+    position: relative;
+    &-banner {
+      display: none;
+      background-color: var(--bg-fondo-transparente);
+      position: absolute;
+      max-width: 60%;
+      color: black;
+      font-size: 3rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      &--bottom {
+        bottom: 8rem;
+      }
+      &--top {
+        top: 5rem;
+      }
+      &-content {
+        margin-left: 2rem;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        overflow: hidden;
+        line-height: 2rem;
+        &-primary {
+          font-size: 2.2rem;
+          font-weight: bold;
+          line-height: 2.5rem;
+          text-transform: uppercase;
+        }
+        &-secondary {
+          margin-top: 1rem;
+          font-size: 2rem;
+        }
+        &-terciary {
+          margin-top: 1rem;
+          font-size: 1.5rem;
+          font-weight: 200;
+        }
+        &-link {
+          margin-top: 1rem;
+          /* max-width: 80%; */
+          width: 180px;
+        }
+      }
+
+      @media (min-width: 400px) {
+        display: flex;
+      }
+    }
+    &-picture {
+      &-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: $marca-primary;
+  color: $marca-terciary;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__smedia {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    &-item:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &-item {
+      transition: color 0.3s;
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+  }
+  &__logo {
+    margin-top: 3rem;
+  }
+  &__links {
+    &-subtitle {
+      margin-top: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid $marca-secondary;
+    }
+    &-list {
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &-item {
+      margin-top: 0.8rem;
+      letter-spacing: 0.1rem;
+      transition: color 0.3s;
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+
+    @media (min-width: $mqMd) {
+      width: 60%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @media (min-width: $mqLg) {
+      width: 40%;
+    }
+  }
+  &__copyright {
+    line-height: 10rem;
+    font-size: 1.5rem;
+  }
+}
+
+.btn--primary {
+  @include button($marca-primary, $marca-terciary, $font-size: 1.5rem);
+}
+.btn--secondary {
+  @include button($marca-secondary, $marca-terciary, $font-size: 1.5rem);
+}
+.clearfix {
+  clear: both;
 }
