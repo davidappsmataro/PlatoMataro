@@ -1,173 +1,318 @@
 <section
-class="splide"
-id="fullscreen-carousel"
-aria-label="Carrosel de imágenes de la web"
+  class="splide"
+  id="fullscreen-carousel"
+  aria-label="Carrosel de imágenes de la web"
 >
-<div class="splide__track">
-  <ul class="splide__list">
-    <li class="splide__slide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      <li class="splide__slide">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/foto1.jpeg?as=webp&width=3000 3000w,
+              assets/images/foto1.jpeg?as=webp&width=2500 2500w,
+              assets/images/foto1.jpeg?as=webp&width=2000 2000w,
+              assets/images/foto1.jpeg?as=webp&width=1550 1600w,
+              assets/images/foto1.jpeg?as=webp&width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
 
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/foto1.jpeg?width=3000 3000w,
+              assets/images/foto1.jpeg?width=2500 2500w,
+              assets/images/foto1.jpeg?width=2000 2000w,
+              assets/images/foto1.jpeg?width=1550 1600w,
+              assets/images/foto1.jpeg?width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 993px)"
+            srcset="
+              assets/images/foto1.jpeg?as=webp&width=1600 1600w,
+              assets/images/foto1.jpeg?as=webp&width=1200 1200w,
+              assets/images/foto1.jpeg?as=webp&width=993   993w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
 
-      <picture>
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-            assets/images/foto1.jpeg?as=webp&width=3000 3000w,
-            assets/images/foto1.jpeg?as=webp&width=2500 2500w,
-            assets/images/foto1.jpeg?as=webp&width=2000 2000w,
-            assets/images/foto1.jpeg?as=webp&width=1550 1600w,
-            assets/images/foto1.jpeg?as=webp&width=1200 1200w
-          "
-          sizes="100vw"
-          type="image/webp"
-        />
-
-        <source
-          media="(min-width: 1200px)"
-          srcset="
-            assets/images/foto1.jpeg?width=3000 3000w,
-            assets/images/foto1.jpeg?width=2500 2500w,
-            assets/images/foto1.jpeg?width=2000 2000w,
-            assets/images/foto1.jpeg?width=1550 1600w,
-            assets/images/foto1.jpeg?width=1200 1200w
-          "
-          sizes="100vw"
-          type="image/jpeg"
-        />
-        <source
-          media="(min-width: 993px)"
-          srcset="
-            assets/images/foto1.jpeg?as=webp&width=1600 1600w,
-            assets/images/foto1.jpeg?as=webp&width=1200 1200w,
-            assets/images/foto1.jpeg?as=webp&width=993   993w
-          "
-          sizes="100vw"
-          type="image/webp"
-        />
-
-        <source
-          media="(min-width: 993px)"
-          srcset="
-            assets/images/foto1.jpeg?width=1550 1550w,
-            assets/images/foto1.jpeg?width=1240 1240w,
-            assets/images/foto1.jpeg?width=992   992w
-          "
-          sizes="100vw"
-          type="image/jpeg"
-        />
-        <source
-          media="(min-width: 769px)"
-          srcset="
-            assets/images/foto1.jpeg?as=webp&width=1240 1240w,
-            assets/images/foto1.jpeg?as=webp&width=992   992w,
-            assets/images/foto1.jpeg?as=webp&width=768   768w
-          "
-          sizes="100vw"
-          type="image/webp"
-        />
-        <!-- Versión JPEG para pantallas medianas -->
-        <source
-          media="(min-width: 769px)"
-          srcset="
-            assets/images/foto1.jpeg?width=1240 1240w,
-            assets/images/foto1.jpeg?width=992   992w,
-            assets/images/foto1.jpeg?width=768   768w
-          "
-          sizes="100vw"
-          type="image/jpeg"
-        />
-        <source
-          media="(max-width: 768px)"
-          srcset="
-            assets/images/foto1.jpeg?as=webp&width=992 992w,
-            assets/images/foto1.jpeg?as=webp&width=768 768w
-
-          "
-          sizes="100vw"
-          type="image/webp"
-        />
-        <source
-          media="(max-width: 768px)"
-          srcset="
-            assets/images/foto1.jpeg?width=992 992w,
-            assets/images/foto1.jpeg?width=768 768w,
-            assets/images/foto1.jpeg?width=480 480w
-          "
-          sizes="100vw"
-          type="image/jpeg"
-        />
-        <img
-          class="splide__slide-picture-img"
-          src="assets/images/foto1.jpeg"
-          alt="Plato de mataró con guisantes, patatas y sepia"
-          loading="lazy"
-          width="3000"
-          height="2000"
-        />
-      </picture>
-    </li>
-    <li class="splide__slide">
-      <div class="splide__slide-banner splide__slide-banner--bottom">
-        <div class="splide__slide-banner-content">
-          <p class="splide__slide-banner-content-primary">
-            Guisantes con sepia y patata
-          </p>
-          <p class="splide__slide-banner-content-secondary">
-            ¿Quieres conocer su receta?
-          </p>
-          <p class="splide__slide-banner-content-terciary">
-            Más de 27 años de tradición
-          </p>
-          <a
-            href="#receta"
-            class="splide__slide-banner-content-link btn--primary"
-            >+info</a
-          >
+          <source
+            media="(min-width: 993px)"
+            srcset="
+              assets/images/foto1.jpeg?width=1550 1550w,
+              assets/images/foto1.jpeg?width=1240 1240w,
+              assets/images/foto1.jpeg?width=992   992w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/foto1.jpeg?as=webp&width=1240 1240w,
+              assets/images/foto1.jpeg?as=webp&width=992   992w,
+              assets/images/foto1.jpeg?as=webp&width=768   768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/foto1.jpeg?width=1240 1240w,
+              assets/images/foto1.jpeg?width=992   992w,
+              assets/images/foto1.jpeg?width=768   768w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/foto1.jpeg?as=webp&width=992 992w,
+              assets/images/foto1.jpeg?as=webp&width=768 768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/foto1.jpeg?width=992 992w,
+              assets/images/foto1.jpeg?width=768 768w,
+              assets/images/foto1.jpeg?width=480 480w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <img
+            class="splide__slide-picture-img"
+            src="assets/images/foto1.jpeg"
+            alt="Plato de mataró con guisantes, patatas y sepia"
+            loading="lazy"
+            width="3000"
+            height="2000"
+          />
+        </picture>
+      </li>
+      <li class="splide__slide">
+        <div class="splide__slide-banner splide__slide-banner--bottom">
+          <div class="splide__slide-banner-content">
+            <p class="splide__slide-banner-content-primary">
+              Guisantes con sepia y patata
+            </p>
+            <p class="splide__slide-banner-content-secondary">
+              ¿Quieres conocer su receta?
+            </p>
+            <p class="splide__slide-banner-content-terciary">
+              Más de 27 años de tradición
+            </p>
+            <a
+              href="#receta"
+              class="splide__slide-banner-content-link btn--primary"
+              >+info</a
+            >
+          </div>
         </div>
-      </div>
-      <picture>
-        <img
-          class="splide__slide-picture-img"
-          src="assets/images/foto2.png"
-          alt="Imagen de los integrantes de la banda de los Rolling Stones"
-          loading="lazy"
-          width="3000"
-          height="1697"
-        />
-      </picture>
-    </li>
-    <li class="splide__slide">
-      <div class="splide__slide-banner splide__slide-banner--top">
-        <div class="splide__slide-banner-content">
-          <p class="splide__slide-banner-content-primary">
-            ¡Mataró es una ciudad mediterránea para descubrir en cualquier momento del año!
-          </p>
-          <p class="splide__slide-banner-content-secondary">
-            Ven a conocerla
-          </p>
-          <p class="splide__slide-banner-content-terciary">
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/foto2.jpeg?as=webp&width=3000 3000w,
+              assets/images/foto2.jpeg?as=webp&width=2500 2500w,
+              assets/images/foto2.jpeg?as=webp&width=2000 2000w,
+              assets/images/foto2.jpeg?as=webp&width=1550 1600w,
+              assets/images/foto2.jpeg?as=webp&width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
 
-            La capital del Maresme
-          </p>
-          <a
-            href="#mataro"
-            class="splide__slide-banner-content-link btn--primary"
-            >+info</a
-          >
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/foto2.jpeg?width=3000 3000w,
+              assets/images/foto2.jpeg?width=2500 2500w,
+              assets/images/foto2.jpeg?width=2000 2000w,
+              assets/images/foto2.jpeg?width=1550 1600w,
+              assets/images/foto2.jpeg?width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 993px)"
+            srcset="
+              assets/images/foto2.jpeg?as=webp&width=1600 1600w,
+              assets/images/foto2.jpeg?as=webp&width=1200 1200w,
+              assets/images/foto2.jpeg?as=webp&width=993   993w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+
+          <source
+            media="(min-width: 993px)"
+            srcset="
+              assets/images/foto2.jpeg?width=1550 1550w,
+              assets/images/foto2.jpeg?width=1240 1240w,
+              assets/images/foto2.jpeg?width=992   992w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/foto2.jpeg?as=webp&width=1240 1240w,
+              assets/images/foto2.jpeg?as=webp&width=992   992w,
+              assets/images/foto2.jpeg?as=webp&width=768   768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/foto2.jpeg?width=1240 1240w,
+              assets/images/foto2.jpeg?width=992   992w,
+              assets/images/foto2.jpeg?width=768   768w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/foto2.jpeg?as=webp&width=992 992w,
+              assets/images/foto2.jpeg?as=webp&width=768 768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/foto2.jpeg?width=992 992w,
+              assets/images/foto2.jpeg?width=768 768w,
+              assets/images/foto2.jpeg?width=480 480w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <img
+            class="splide__slide-picture-img"
+            src="assets/images/foto2.jpeg"
+            alt="Imagen sepia con guisantes y patatas y cuchara de madera"
+            loading="lazy"
+            width="3000"
+            height="2000"
+          />
+        </picture>
+      </li>
+      <li class="splide__slide">
+        <div class="splide__slide-banner splide__slide-banner--top">
+          <div class="splide__slide-banner-content">
+            <p class="splide__slide-banner-content-primary">
+              ¡Mataró es una ciudad mediterránea para descubrir en cualquier
+              momento del año!
+            </p>
+            <p class="splide__slide-banner-content-secondary">
+              Ven a conocerla
+            </p>
+            <p class="splide__slide-banner-content-terciary">
+              La capital del Maresme
+            </p>
+            <a
+              href="#mataro"
+              class="splide__slide-banner-content-link btn--primary"
+              >+info</a
+            >
+          </div>
         </div>
-      </div>
-      <picture>
-        <img
-          class="splide__slide-picture-img"
-          src="assets/images/mataro.jpg"
-          alt="Imagen del puerto deportivo de Mataró"
-          loading="lazy"
-          width="3000"
-          height="1697"
-        />
-      </picture>
-    </li>
+        <picture>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/mataro.jpg?as=webp&width=1715 1715w,
+              assets/images/mataro.jpg?as=webp&width=1550 1600w,
+              assets/images/mataro.jpg?as=webp&width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
 
-  </ul>
-</div>
+          <source
+            media="(min-width: 1200px)"
+            srcset="
+              assets/images/mataro.jpg?width=1715 1715w,
+              assets/images/mataro.jpg?width=1550 1600w,
+              assets/images/mataro.jpg?width=1200 1200w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/mataroB.jpg?as=webp&width=1255 1255w,
+              assets/images/mataroB.jpg?as=webp&width=992   992w,
+              assets/images/mataroB.jpg?as=webp&width=768   768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <!-- Versión JPEG para pantallas medianas -->
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/mataroB.jpg?width=1255 1255w,
+              assets/images/mataroB.jpg?width=992   992w,
+              assets/images/mataroB.jpg?width=768   768w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+
+              assets/images/mataroC.jpg?as=webp&width=822   822w,
+              assets/images/mataroC.jpg?as=webp&width=620   620w
+              assets/images/mataroC.jpg?as=webp&width=480   480w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/mataroC.jpg?width=822 822w,
+              assets/images/mataroC.jpg?width=620 620w,
+              assets/images/mataroC.jpg?width=480 480w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <img
+            class="splide__slide-picture-img"
+            src="assets/images/mataro.jpg"
+            alt="Imagen del puerto deportivo de Mataró"
+            loading="lazy"
+            width="1715"
+            height="737"
+          />
+        </picture>
+      </li>
+    </ul>
+  </div>
 </section>

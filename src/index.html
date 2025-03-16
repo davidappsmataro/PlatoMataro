@@ -183,12 +183,57 @@
           <strong>JORNADAS GASTRONÓMICAS DEL PLATO DE MATARÓ</strong> entre los
           días <strong>15 de Marzo y 1 de Mayo</strong>.
         </p>
-        <img
-          class="main__section-cartel"
-          src="assets/images/bannerjornadas.jpg"
-          loading="lazy"
-          alt="Cartel de las jornadas"
-        />
+        <picture>
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/bannerjornadas.jpg?as=webp&width=1100 1100w,
+              assets/images/bannerjornadas.jpg?as=webp&width=992   992w,
+              assets/images/bannerjornadas.jpg?as=webp&width=768   768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+
+          <source
+            media="(min-width: 769px)"
+            srcset="
+              assets/images/bannerjornadas.jpg?width=1100 1100w,
+              assets/images/bannerjornadas.jpg?width=992   992w,
+              assets/images/bannerjornadas.jpg?width=768   768w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/bannerjornadas.jpg?as=webp&width=992 992w,
+              assets/images/bannerjornadas.jpg?as=webp&width=768 768w
+            "
+            sizes="100vw"
+            type="image/webp"
+          />
+          <source
+            media="(max-width: 768px)"
+            srcset="
+              assets/images/bannerjornadas.jpg?width=992 992w,
+              assets/images/bannerjornadas.jpg?width=768 768w,
+              assets/images/bannerjornadas.jpg?width=480 480w
+            "
+            sizes="100vw"
+            type="image/jpeg"
+          />
+
+          <img
+            class="main__section-cartel"
+            src="assets/images/bannerjornadas.jpg"
+            loading="lazy"
+            alt="Cartel de las jornadas"
+            width="1100"
+            height="405"
+          />
+        </picture>
 
         <p class="main__section-text">
           Durante estos días los ciudadanos de Mataró y el Maresme podrán
@@ -260,6 +305,8 @@
               src="assets/images/Nau_Gaudi.jpg"
               loading="lazy"
               alt="Imagen Nau Gaudí de Mataró"
+              width="1080"
+              height="720"
             />
           </picture>
           <figcaption class="main__section-figure-caption">
@@ -343,6 +390,8 @@
               src="assets/images/santes1.jpeg"
               loading="lazy"
               alt="Imagen de Mataró"
+              width="992"
+              height="661"
             />
           </picture>
           <figcaption class="main__section-figure-caption">
