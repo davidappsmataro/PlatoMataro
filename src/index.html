@@ -19,6 +19,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss" />
     <!-- do not remove this line! -->
     <title>El Plat de Mataró</title>
+    <script src="assets/scripts/lite-yt-embed.js" async></script>
     <script type="module" src="assets/scripts/splide.js"></script>
   </head>
   <body>
@@ -158,7 +159,7 @@
           ></cite
         >
         <figure class="main__section-preparacion-video">
-          <iframe
+          <!--  <iframe
             class="main__section-preparacion-video-youtube"
             width="560"
             height="315"
@@ -168,7 +169,22 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
-          ></iframe>
+          ></iframe> -->
+          <lite-youtube
+            class="main__section-preparacion-video-youtube"
+            videoid="RKaq5zASZqM"
+            style="background-image: url('assets/images/youtube.webp')"
+          >
+            <a
+              href="https://youtube.com/watch?v=RKaq5zASZqM"
+              class="lty-playbtn"
+              title="Play Video"
+            >
+              <span class="lyt-visually-hidden"
+                >Pèsols amb sèpia i patates</span
+              >
+            </a>
+          </lite-youtube>
           <figcaption class="main__section-preparacion-video-caption">
             Vídeo de la receta del Plato de Mataró -
             <cite>Restaurant El Nou-Cents, Mataró </cite>
@@ -230,8 +246,6 @@
             src="assets/images/bannerjornadas.jpg"
             loading="lazy"
             alt="Cartel de las jornadas"
-            width="1100"
-            height="405"
           />
         </picture>
 
@@ -305,8 +319,6 @@
               src="assets/images/Nau_Gaudi.jpg"
               loading="lazy"
               alt="Imagen Nau Gaudí de Mataró"
-              width="1080"
-              height="720"
             />
           </picture>
           <figcaption class="main__section-figure-caption">
@@ -390,8 +402,6 @@
               src="assets/images/santes1.jpeg"
               loading="lazy"
               alt="Imagen de Mataró"
-              width="992"
-              height="661"
             />
           </picture>
           <figcaption class="main__section-figure-caption">
