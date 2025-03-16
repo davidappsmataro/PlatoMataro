@@ -60,4 +60,8 @@
       header.classList.remove("header--sticky");
     }
   });
+  //recalculo la posicion del footer si redimensiono la ventana (responsive).
+  window.addEventListener("resize", () => {
+    sticky = stickyUntilFooter.offsetTop;
+  });
 })();
