@@ -311,6 +311,7 @@ cite {
         justify-content: center;
         height: 100%;
         padding: 3rem;
+        margin-right: 2rem;
         margin-left: 2rem;
         overflow: hidden;
         line-height: 2rem;
@@ -326,12 +327,12 @@ cite {
         }
         &-terciary {
           margin-top: 1rem;
-          font-size: 1.5rem;
+          font-size: 1.9rem;
           font-weight: 200;
         }
         &-link {
-          width: 180px;
-          margin-top: 1rem;
+          max-width: 180px;
+          margin-top: 1.5rem;
         }
       }
 
