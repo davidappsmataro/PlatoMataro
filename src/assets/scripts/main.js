@@ -50,7 +50,7 @@
         opcionesMenu.classList.remove("header__navbar-menu--active");
       }
     };
-    //hago scroll y el menu lo oculatamos cuando llegamos al footer
+    //hago scroll y el menu lo oculatamos cuando llegamos al id mataro
     window.addEventListener("scroll", () => {
       if (window.pageYOffset < sticky) {
         header.classList.add("header--sticky");

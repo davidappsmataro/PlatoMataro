@@ -1,3 +1,7 @@
+/****************************
+     Header Styles
+*****************************/
+
 .header {
   display: flex;
   align-items: center;
@@ -41,23 +45,19 @@
       justify-content: center;
       width: 50%;
       min-width: 150px;
-      background-color: $marca-primary-light;
+      background-color: var(--primary-light-color);
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
       &-item {
         width: 90%;
-        /*  padding-top: 2rem;
-        padding-bottom: 2rem; */
         text-align: center;
         text-transform: uppercase;
-        border-bottom: 1px solid $fondo-transparente;
+        border-bottom: 1px solid var(--bg-fondo-transparente);
         &:is(:last-child) {
           border-bottom: none;
         }
 
         @media (min-width: $mqMd) {
-          /*  padding-top: 0rem;
-          padding-bottom: 0rem; */
           margin-top: 0rem;
           margin-right: 1.8rem;
           border: none;
@@ -70,8 +70,8 @@
       &-link {
         display: block;
         width: 100%;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding-top: px-to-rem(32);
+        padding-bottom: px-to-rem(32);
         font-size: 1.9rem;
         font-weight: 700;
         transition: color 0.3s;
@@ -94,7 +94,7 @@
         flex-direction: row;
         width: auto;
         padding: auto;
-        background-color: $marca-primary;
+        background-color: var(--primary-color);
         box-shadow: none;
       }
     }
@@ -120,7 +120,7 @@
 
     &-bburguer {
       &-btn {
-        color: $marca-terciary;
+        color: var(--terciary-color);
         cursor: pointer;
         background-color: transparent;
         border: none;
@@ -140,6 +140,9 @@
     }
   }
 }
+/****************************
+     main Styles
+*****************************/
 .main {
   &__section {
     width: 80%;
@@ -202,7 +205,7 @@
       margin-bottom: 1rem;
       font-size: 2.5rem;
       font-weight: 300;
-      color: $marca-primary;
+      color: var(--primary-color);
       &:not(:first-child) {
         margin-top: 4rem;
       }
@@ -220,21 +223,20 @@
     &-preparacion {
       list-style-type: decimal;
       &-video {
+        margin-inline: auto;
         margin-top: 5rem;
-        margin-right: auto;
-        margin-left: auto;
         &-youtube {
-          border: 5px solid $marca-primary;
-        }
-
-        @media (min-width: $mqLg) {
-          width: 70%;
+          margin: 0 auto;
+          border: 5px solid var(--primary-color);
         }
         &-caption {
-          margin: 1rem 0;
+          margin: 1rem auto;
           font-size: 1.8rem;
           font-weight: 300;
           text-align: center;
+        }
+        @media (min-width: $mqLg) {
+          width: 70%;
         }
       }
     }
@@ -245,7 +247,7 @@
       /*  width: 50%; */
       margin-top: 2rem;
       &-img {
-        border: 3px solid $marca-primary;
+        border: 3px solid var(--primary-color);
       }
       &-caption {
         margin-top: 0.2rem;
@@ -255,9 +257,9 @@
         text-align: center;
         &-link {
           font-style: italic;
-          color: $marca-secondary;
+          color: var(--secondary-color);
           &:hover {
-            color: $marca-secondary-light;
+            color: var(--secondary-light-color);
           }
         }
         @media (max-width: $mqMd) {
@@ -280,10 +282,10 @@
     }
   }
 }
-cite {
-  margin-top: 2rem;
-}
 
+/****************************
+    Carrusel Styles
+*****************************/
 .splide {
   .splide__slide {
     position: relative;
@@ -294,8 +296,7 @@ cite {
       left: 0;
       display: none;
       max-width: 60%;
-      margin-right: auto;
-      margin-left: auto;
+      margin-inline: auto;
       font-size: 3rem;
       color: black;
       background-color: var(--bg-fondo-transparente);
@@ -311,8 +312,7 @@ cite {
         justify-content: center;
         height: 100%;
         padding: 3rem;
-        margin-right: 2rem;
-        margin-left: 2rem;
+        margin-inline: 2rem;
         overflow: hidden;
         line-height: 2rem;
         &-primary {
@@ -350,13 +350,16 @@ cite {
   }
 }
 
+/****************************
+     Footer Styles
+*****************************/
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: $marca-terciary;
-  background-color: $marca-primary;
+  color: var(--terciary-color);
+  background-color: var(--primary-color);
 
   &__smedia {
     display: flex;
@@ -379,7 +382,7 @@ cite {
     &-subtitle {
       padding-bottom: 1rem;
       margin-top: 2rem;
-      border-bottom: 2px solid $marca-secondary;
+      border-bottom: 2px solid var(--secondary-color);
     }
     &-list {
       display: flex;
@@ -412,12 +415,16 @@ cite {
   }
 }
 
+/****************************
+     Button Styles - Mixins
+*****************************/
 .btn--primary {
   @include button($marca-primary, $marca-terciary, $font-size: 1.5rem);
 }
 .btn--secondary {
   @include button($marca-secondary, $marca-terciary, $font-size: 1.5rem);
 }
+
 .clearfix {
   clear: both;
 }

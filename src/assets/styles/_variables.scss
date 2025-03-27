@@ -1,14 +1,24 @@
 @use "sass:color";
 
-$marca-primary: #6684be;
-$marca-secondary: #db727e;
-$marca-terciary: white;
+
+//colores
+$marca-primary: rgba(102, 132, 190, 1);
+$marca-secondary: rgba(219, 114, 126, 1);
+$marca-terciary: rgb(255, 255, 255, 1);
 $marca-primary-light: color.scale($marca-primary, $lightness: 20%);
 $marca-secondary-light: color.scale($marca-secondary, $lightness: 40%);
+$fondo: rgb(255, 255, 255, 1);
 $fondo-transparente: color.change($marca-terciary, $alpha: 0.5);
 
+//fuentes
+$font-primary: "Roboto", sans-serif;
+
+//breakpoints
 $mqSm: 576px;
 $mqMd: 768px;
 $mqLg: 992px;
 $mqXl: 1200px;
 $mqXxl: 1400px;
+
+//header
+$alto-header: 10rem;

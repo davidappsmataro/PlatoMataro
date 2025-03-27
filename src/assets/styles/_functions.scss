@@ -1,0 +1,7 @@
+
+
+//https://dev.to/nikolab/convert-px-to-rem-using-sass-3-methods-4ep2
+// Method : Using a function
+@function px-to-rem($px) {
+  @return  calc($px / 16) * 1rem;
+}

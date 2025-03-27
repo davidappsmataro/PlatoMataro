@@ -1,22 +1,22 @@
-//@use "variables" as var;
+
 /****************************
   VARIABLES
   *****************************/
 
 :root {
   --primary-color: #{$marca-primary};
+  --primary-light-color: #{$marca-primary-light};
   --secondary-color: #{$marca-secondary};
   --secondary-light-color: #{$marca-secondary-light};
   --terciary-color: #{$marca-terciary};
 
-  --bg-color: rgb(232, 232, 232);
-  --bg-secondary-color: rgba(20, 20, 20, 1);
+  --bg-color: #{$fondo};
   --bg-fondo-transparente: #{$fondo-transparente};
 
-  --main-font: "Roboto", sans-serif;
-  --secondary-font: "Inspiration", serif;
+  --main-font: #{$font-primary};
 
-  --alto-header: 10rem;
+
+  --alto-header: #{$alto-header};
 }
 /****************************
   Estilos generales
@@ -30,6 +30,7 @@
   margin: 0;
 }
 html {
+  /* font-family: $font-primary; */
   font-family: var(--main-font);
   font-size: 10px;
   scroll-behavior: smooth;
@@ -37,6 +38,7 @@ html {
 
 body {
   font-size: 1.6rem;
+  background-color: var(--bg-color);
 }
 
 a {
