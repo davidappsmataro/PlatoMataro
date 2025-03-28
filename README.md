@@ -1,3 +1,18 @@
+# EL PLATO DE MATARÓ
+
+Es un sitio web no oficial sobre el plato típico de Mataró.
+historia, receta, jornadas gastrnómicas y la ciudad.
+
+Trabajo realizado para las PEC de la asignatura de `Herramientas HTML y CSS ||` del `Máster Universitario en Desarrollo de sitios y aplicaciones web`.
+
+por:
+`DAVID PECHARROMÁN LÓPEZ`
+
+
+
+
+
+
 # UOC Boilerplate
 
 UOC Boilerplate is a starter template for the HTML and CSS Tools courses from the [Master's Program in Multimedia Applications](https://estudis.uoc.edu/ca/masters-universitaris/aplicacions-multimedia/presentacio) and the [Master's Program in Web App and Website Development](https://estudis.uoc.edu/ca/masters-universitaris/desenvolupament-llocs-aplicacions-web/presentacio) at the [Universitat Oberta de Catalunya](https://www.uoc.edu). It aims to provide a basic, modern frontend web development starter pack based on Parcel and including a Sass compiler, an ES6 transpiler, minifiers, an image transformer, and development tools.
